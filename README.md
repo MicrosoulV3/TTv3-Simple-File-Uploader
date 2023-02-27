@@ -6,7 +6,7 @@ This is a base to start with and only allows users above level 6 to delete files
 
 Since this does not use any database tables, the uploader username is prepended to the filename, so its easy to see who added the file, even after you download it.
 
-Make sure your php.ini is set to allow file uploads, and that you dont set the allowed upload size in this mod to exceed upload_max_filesize and post_max_size setting
+Make sure your php.ini is set to allow file uploads, and that you dont set the allowed upload size in this mod to exceed upload_max_filesize and post_max_size setting (those should both be the same number)
 
 You could do something like this at the top of the file to limit access
 
