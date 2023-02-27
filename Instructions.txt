@@ -6,6 +6,6 @@ $fileExtensionsAllowed = ['jpeg', 'jpg', 'png', 'rar', 'zip', 'txt', 'gif','mp4'
 $maxFileSize = 100 * 1024 * 1024; // Change the first number to desired size eg: 100 = 100MB. Cannot exceed php.ini upload_max_filesize and post_max_size setting
 $uploadDirectory = "/uploadedfiles/";
 
-Create a folder to upload files into and CHMOD 755. In this config it is "uploadedfiles"
+Create a folder/directory to upload files into and CHMOD 755. In this config it is "uploadedfiles". You can change that obviously
 
 Make any adjustments to the user class in uploader.php to limit access to the delete button. Default is 6
