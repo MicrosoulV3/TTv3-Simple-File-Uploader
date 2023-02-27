@@ -4,6 +4,7 @@ rather than using a file sharing service. If you know what you are doing, you ca
 This is a base to start with and only allows users above level 6 to delete files, and is open for anyone on the site to use, so make sure you have it set the way you want.
 
 You could do something like this at the top of the file to limit access
+
 if (!$CURUSER || $CURUSER["class"]<"3"){
     show_error_msg(T_("ERROR"), T_("SORRY_NO_RIGHTS_TO_ACCESS"), 1);
 }
