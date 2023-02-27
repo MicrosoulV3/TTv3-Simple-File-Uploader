@@ -10,4 +10,4 @@ Create a folder/directory to upload files into and CHMOD 755. In this config it 
 
 Make any adjustments to the user class in uploader.php to limit access to the delete button. Default is 6
 
-Access it by visiting yoursite.com/uploader.php or create a link wherever you want to do that.
+Access it by visiting yoursite.com/uploader.php or create a link wherever you want to do that
