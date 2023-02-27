@@ -1,4 +1,6 @@
 # TTv3-Simple-File-Uploader
+Simple easy drop-in for TTv3. 3 files to upload and try it out. No database tables
+
 This is a simple file uploader for your TorrentTrader to use however you see fit. Share files by uploading them directly to your server
 rather than using a file sharing service. If you know what you are doing, you can limit its use to select people, but thats up to you.
 
