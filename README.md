@@ -1,5 +1,4 @@
 # TTv3-Simple-File-Uploader
-Simple easy drop-in for TTv3. 3 files to upload and try it out. No database tables
 
 Its useful for sending quick files to friends and thats what I made it for, but you can do whatever.
 
