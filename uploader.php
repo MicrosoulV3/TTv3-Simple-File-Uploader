@@ -57,17 +57,11 @@ function formatBytes($bytes, $decimals = 2) {
   return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . ' ' . @$size[$factor];
 }
 
-// Scan the upload directory for files
 $files = scandir($_SERVER['DOCUMENT_ROOT'] . $uploadDirectory);
-
-// Remove "." and ".." from the list of files
 $files = array_diff($files, array('.', '..'));
-
-//A few breaks to shift the tables down a little bit
 echo "<br><br>";
-
-// Display a list of all files found
 ?>
+
 <div class="table-container">
     <h2 style="color: green; display: inline-block;">Uploaded Files:</h2>
 
