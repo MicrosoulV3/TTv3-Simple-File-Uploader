@@ -1,5 +1,5 @@
 <!-- Simple file uploader for TTv3 Apr 15 2023-->
-<!-- The 2 other files are fileUploadScript and fileDeleteScript -->
+
 <?php
 require_once("backend/functions.php");
 dbconn(false);
