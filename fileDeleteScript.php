@@ -1,5 +1,5 @@
 <!-- Simple file uploader for TTv3 Apr 15 2023-->
-<!--µ-->
+
 <?php
 require_once("backend/functions.php");
 dbconn(false);
