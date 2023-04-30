@@ -71,7 +71,7 @@ echo "<br><br>";
                     <td class="header-cell">File Name</td>
                     <td class="header-cell">Size</td>
                     <td class="header-cell">Upload Date</td>
-                    <?php if (get_user_class() >= 6): ?>
+                    <?php if (get_user_class() >= 6): ?> <!------------------------------------------------------------------------- change the delete class here --------------------------------------------------------------------------------------------->
                         <td class="header-cell">Delete</td>
                     <?php endif; ?>
                 </tr>
