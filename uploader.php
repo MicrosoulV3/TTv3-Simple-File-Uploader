@@ -92,7 +92,7 @@ echo "<br><br>";
                             <?php endif; ?>
                         </td>
 
-                        <?php if (get_user_class() >= 6): ?>
+                        <?php if (get_user_class() >= 6): ?> <!------------------------------------------------------------------------- change the delete class here --------------------------------------------------------------------------------------------->
                             <td>
                                 <form action="fileDeleteScript.php" method="post" onsubmit="return confirm('Are you sure you want to send this masterpiece to hades?');">
                                     <input type="hidden" name="fileToDelete" value="<?= $file ?>">
