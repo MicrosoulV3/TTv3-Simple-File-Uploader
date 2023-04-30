@@ -1,5 +1,7 @@
 # TTv3-Simple-File-Uploader
 
+No SQL edits. simple, hence the name. Feel free to alter or modify this in any way you want.
+
 Its useful for sending quick files to friends and thats what I made it for, but you can do whatever.
 
 This is a simple file uploader for your TorrentTrader to use however you see fit. Share files by uploading them directly to your server
