@@ -34,7 +34,7 @@ function validateFile() {
     const fileExtensionsAllowed = <?php echo json_encode($fileExtensionsAllowed); ?>; // allowed file extensions. Defined in config.php
     const fileExtension = fileName.split('.').pop().toLowerCase();
     if (!fileExtensionsAllowed.includes(fileExtension)) {
-    let message = "Sorry, the file type you are trying to upload is not allowed. Please upload a file with the following extension";
+    let message = "Sorry, you are trying to upload a ." + fileExtension + " file, which is not allowed. Please upload a file with the following extension";
     if (fileExtensionsAllowed.length === 1) {
         message += ": ." + fileExtensionsAllowed[0];
     } else if (fileExtensionsAllowed.length === 2) {
@@ -45,7 +45,6 @@ function validateFile() {
     alert(message);
     return false;
 }
-
     if (fileSize > maxFileSizeBytes) {
         const fileSizeMB = Math.round(fileSize / (1024 * 1024));
         alert("File is too large. Maximum file size is " + maxFileSizeMB + " MB. Your file size is " + fileSizeMB + " MB.");
