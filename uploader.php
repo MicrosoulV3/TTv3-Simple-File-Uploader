@@ -38,7 +38,7 @@ function validateFile() {
     if (fileExtensionsAllowed.length === 1) {
         message += ": ." + fileExtensionsAllowed[0];
     } else if (fileExtensionsAllowed.length === 2) {
-        message += "s: ." + fileExtensionsAllowed.join(" and .");
+        message += "s: ." + fileExtensionsAllowed.join(" or .");
     } else {
         message += "s: ." + fileExtensionsAllowed.slice(0, -1).join(", .") + ", or ." + fileExtensionsAllowed.slice(-1);
     }
