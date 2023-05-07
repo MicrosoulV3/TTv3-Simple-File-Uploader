@@ -16,7 +16,7 @@ $maxFileSizeMB = $maxFileSize / (1024 * 1024); // Convert bytes to megabytes. DO
 <head>
 
 <meta charset="UTF-8" http-equiv="refresh" content="100" border="none">
-   <link rel="stylesheet" type="text/css" href="<?php echo $site_config['SITEURL'];?>/themes/<?php echo $THEME;?>/themes.css" />
+   <link rel="stylesheet" type="text/css" href="<?php echo $site_config['SITEURL'];?>/themes/<?php echo $THEME;?>/theme.css" />
     <title>PHP File Upload</title>
     <script>
 
