@@ -13,7 +13,7 @@ if (isset($_POST['delete']) && isset($_POST['fileToDelete'])) {
     $filePath = realpath($_SERVER['DOCUMENT_ROOT']) . $uploadDirectory . $fileToDelete;
 
     if (file_exists($filePath)) {
-        $logEntry = $CURUSER['username'] . " has deleted a file: $fileToDelete";
+        $logEntry = $CURUSER['username'] . " has deleted a file from the simple file uploader page: $fileToDelete";
         write_log($logEntry);
         unlink($filePath);
         autolink("uploader.php", "<b><font color='#ff0000'>File Deleted....</font></b>");
