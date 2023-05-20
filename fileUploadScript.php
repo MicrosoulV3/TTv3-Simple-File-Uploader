@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
     $fileTmpName  = $_FILES['the_file']['tmp_name'];
     $uploadPath = $currentDirectory . $uploadDirectory . $username . '_' . basename($fileName); //Uploader name prepended to file
 
-    // There is no "File too large" error message here or filetype check due to validateFile check on uploader.php
+    // There is no "File too large" error message here or filetype check due to validateFile check on uploader.php. If it makes it this far, its uploading
 if (move_uploaded_file($fileTmpName, $uploadPath)) {
         autolink ("uploader.php", "<b><font color='#ff0000'>File Uploaded....</font></b>");
     } else {
