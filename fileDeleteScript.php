@@ -10,7 +10,12 @@ begin_frame("delete");
 
 if (isset($_POST['delete']) && isset($_POST['fileToDelete'])) {
     $fileToDelete = $_POST['fileToDelete'];
-    $filePath = realpath($_SERVER['DOCUMENT_ROOT']) . $uploadDirectory . $fileToDelete;
+
+    if (!preg_match('/^[a-zA-Z0-9_\-\.]+$/', $fileToDelete)) {
+        exit("Invalid file name.");
+    }
+
+    $filePath = realpath($_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . $uploadDirectory) . DIRECTORY_SEPARATOR . $fileToDelete;
 
     if (file_exists($filePath)) {
         $logEntry = $CURUSER['username'] . " has deleted a file from the simple file uploader page: $fileToDelete";
