@@ -1,6 +1,6 @@
 # TTv3-Simple-File-Uploader
 
-No SQL edits or entries. Feel free to alter or modify this in any way you want.
+No SQL edits or entries. Feel free to alter or modify this in any way you want
 
 Its useful for sending files to friends and thats what I made it for, but you can do whatever you want.
 
