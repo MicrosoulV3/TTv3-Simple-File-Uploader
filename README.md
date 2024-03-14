@@ -13,4 +13,4 @@ Since this does not use any database tables, the uploader username is prepended 
 
 Make sure your php.ini is set to allow file uploads, and that you dont set the allowed upload size in this mod to exceed upload_max_filesize and post_max_size settings. (post_max_size should be a little higher than upload_max_filesize for overhead)
 
-Access is limited in the config.
+Access control is limited in the config.
