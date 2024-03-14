@@ -16,7 +16,7 @@ $maxFileSizeMB = $maxFileSize / (1024 * 1024); // Convert bytes to megabytes. DO
 <head>
 
 <meta charset="UTF-8" http-equiv="refresh" content="100" border="none">
-   <link rel="stylesheet" type="text/css" href="<?php echo $site_config['SITEURL'];?>/themes/<?php echo $THEME;?>/theme.css" />
+   <link rel="stylesheet" type="text/css" href="<?php echo $site_config['SITEURL'];?>/themes/<?php echo $THEME;?>/themes.css" />
     <title>PHP File Upload</title>
     <script>
 
@@ -96,7 +96,7 @@ echo "<br><br>";
                     <td class="header-cell">File Name</td>
                     <td class="header-cell">Size</td>
                     <td class="header-cell">Upload Date</td>
-                    <?php if (get_user_class() >= 6): ?> <!------------------------------------------------------------------------- change the delete class here --------------------------------------------------------------------------------------------->
+                    <?php if (get_user_class() >= $site_config['min_user_class']): ?>
                         <td class="header-cell">Delete</td>
                     <?php endif; ?>
                 </tr>
@@ -117,7 +117,8 @@ echo "<br><br>";
                             <?php endif; ?>
                         </td>
 
-                        <?php if (get_user_class() >= 6): ?> <!------------------------------------------------------------------------- change the delete class here --------------------------------------------------------------------------------------------->
+                        <?php if (get_user_class() >= $site_config['min_user_class']): ?>
+
                             <td>
                                 <form action="fileDeleteScript.php" method="post" onsubmit="return confirm('Are you sure you want to send this masterpiece to hades?');">
                                     <input type="hidden" name="fileToDelete" value="<?= $file ?>">
@@ -174,7 +175,7 @@ echo "<br><br>";
     }
 </style>
 <?php
-} else { show_error_msg("Sorry", "Site file uploader is unavailable currently",1); }
+} else { show_error_msg("Sorry", "Site file uploader is currently unavailable",1); }
 end_frame();
 stdfoot();
 ?>
