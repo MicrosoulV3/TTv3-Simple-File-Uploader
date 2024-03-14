@@ -6,6 +6,7 @@ $fileExtensionsAllowed = ['rar', 'zip']; // Allowed filetypes
 $maxFileSize = 100 * 1024 * 1024; // Change the first number to desired size eg: 100 = 100MB. Cannot exceed php.ini upload_max_filesize and post_max_size setting. Its overcomplicated, i'm sorry
 $uploadDirectory = "/uploadedfiles/"; // this should be obvious
 $site_config['min_user_class'] = 6; // User level needed to delete files. Default is 6
+$site_config['MINIMUM_CLASS_LEVEL'] = 3; //Minimum Class level to access to downloader page. Adjust as needed
 
 Create a folder/directory to upload files into and CHMOD 755. In this config it is "uploadedfiles". You can change that obviously.
 Access it by visiting yoursite.com/uploader.php or create a link wherever you want to do that
