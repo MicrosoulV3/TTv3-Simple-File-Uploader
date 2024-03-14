@@ -7,6 +7,5 @@ $maxFileSize = 100 * 1024 * 1024; // Change the first number to desired size eg:
 $uploadDirectory = "/uploadedfiles/"; // this should be obvious
 $site_config['min_user_class'] = 6; // User level needed to delete files. Default is 6
 
-Create a folder/directory to upload files into and CHMOD 755. In this config it is "uploadedfiles". You can change that obviously
-Make any adjustments to the user class in uploader.php to limit access to the delete button. Default is 6
+Create a folder/directory to upload files into and CHMOD 755. In this config it is "uploadedfiles". You can change that obviously.
 Access it by visiting yoursite.com/uploader.php or create a link wherever you want to do that
