@@ -13,8 +13,4 @@ Since this does not use any database tables, the uploader username is prepended 
 
 Make sure your php.ini is set to allow file uploads, and that you dont set the allowed upload size in this mod to exceed upload_max_filesize and post_max_size settings. (post_max_size should be a little higher than upload_max_filesize for overhead)
 
-You could do something like this at the top of the file to limit access
-
-if (!$CURUSER || $CURUSER["class"]<"3"){
-    show_error_msg(T_("ERROR"), T_("SORRY_NO_RIGHTS_TO_ACCESS"), 1);
-}
+Access is limited in the config.
