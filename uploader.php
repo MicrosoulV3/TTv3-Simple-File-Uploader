@@ -8,6 +8,11 @@ loggedinonly();
 stdhead("File Uploader");
 
 begin_frame("Upload a file to share");
+
+if (!$CURUSER || $CURUSER["class"] < $site_config['MINIMUM_CLASS_LEVEL']) {
+    show_error_msg(T_("ERROR"), T_("SORRY_NO_RIGHTS_TO_ACCESS"), 1);
+}
+
 if ($site_config['UPLOADER']){
 $maxFileSizeMB = $maxFileSize / (1024 * 1024); // Convert bytes to megabytes. DON'T TOUCH THIS!
 ?>   
