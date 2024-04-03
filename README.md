@@ -4,9 +4,9 @@ No SQL edits or entries. Feel free to alter or modify this in any way you want
 
 Its useful for sending files to friends and thats what I made it for, but you can do whatever you want.
 
-This is a simple file uploader for your TorrentTrader to use however you see fit. Share files by uploading them directly to your server. It is secure as long as you dont allow any executables to be uploaded, because that's just stupid, but you know that :)
+This is a simple file uploader for your TorrentTrader to use however you see fit. Share files by uploading them directly to your server rather than using a file sharing service. It is secure as long as you dont allow any executables to be uploaded, because that's just stupid, but you know that :)
+
 It is set by default for zip and rar, but you can clearly do whatever you want.
-rather than using a file sharing service.
 
 This is a basic code to start with. Access for uploading and deleting files is set in the config, which is outlined in the instructions.
 
