@@ -60,23 +60,26 @@ function validateFile() {
     </script>
 </head>
 
+    <?php
+function formatBytes($bytes, $decimals = 2) {
+  $size = array('B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB');
+  $factor = floor((strlen($bytes) - 1) / 3);
+  return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . ' ' . @$size[$factor];
+}
+    ?>
+    
 <body>
     <form action="fileUploadScript.php" method="post" enctype="multipart/form-data" onsubmit="return validateFile()">
         Upload a File:
         <input type="file" name="the_file" id="fileToUpload">
         <input type="submit" name="submit" value="Send it">
-        <p>Maximum file size: <span style='color: green; font-weight:bold; font-size:10pt'><?php echo $maxFileSizeMB; ?> MB</span></p>
+        <p>Maximum file size: <span style='color: green; font-weight:bold; font-size:10pt'><?php echo formatBytes($maxFileSizeMB * 1024 * 1024); ?></span></p>
         <p>Allowed Types: <span style='color: green; font-weight:bold; font-size:10pt'><?php echo implode(', ', $fileExtensionsAllowed); ?></span></p>
     </form>
 </body>
 </html>
 
 <?php
-function formatBytes($bytes, $decimals = 2) {
-  $size = array('B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB');
-  $factor = floor((strlen($bytes) - 1) / 3);
-  return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . ' ' . @$size[$factor];
-}
 
 // Scan the upload directory for files
 $files = scandir($_SERVER['DOCUMENT_ROOT'] . $uploadDirectory);
