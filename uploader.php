@@ -87,6 +87,17 @@ $files = scandir($_SERVER['DOCUMENT_ROOT'] . $uploadDirectory);
 // Remove "." and ".." from the list of files
 $files = array_diff($files, array('.', '..'));
 
+// Sort files by file modification time (newest first)
+usort($files, function($a, $b) use ($uploadDirectory) {
+    $fileAPath = $_SERVER['DOCUMENT_ROOT'] . $uploadDirectory . $a;
+    $fileBPath = $_SERVER['DOCUMENT_ROOT'] . $uploadDirectory . $b;
+    
+    if (is_file($fileAPath) && is_file($fileBPath)) {
+        return filemtime($fileBPath) - filemtime($fileAPath); // Descending order
+    }
+    return 0;
+});
+
 //A few breaks to shift the tables down a little bit
 echo "<br><br>";
 
